@@ -14,7 +14,7 @@ for(var i=0;i<pac.length;i++){
 $(document).ready(function(){
     $(".polaroid").each(function (i) { 
         var name = "ft"+(i+1).toString();
-        $(this).append("<img src='img/panpan/"+(i+1)+".png' class='polar' />");
+        $(this).hide().append("<img src='img/panpan/"+(i+1)+".png' class='polar' />").fadeIn('slow');
     });
 
     $(".corda").remove();
