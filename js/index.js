@@ -11,12 +11,15 @@ for(var i=0;i<pac.length;i++){
         pac.eq(i).before('<div class="corda"></div>');
     }
 }
+$(document).ready(function(){
 var quant = $(".polar");
 for(var i=0;i<quant.length;i++){
     var name = "ft"+(i+1).toString();
     quant.eq(i).addClass(name);
 
 }
+}
+);
 function atualizar(){
     tamMusic = $(".music").width();
     $(".title").height(tamtilte+50);
