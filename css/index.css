@@ -1,0 +1,204 @@
+/* configurações gerais */
+body,html{
+	margin: 0px auto;
+	padding: 0px auto;
+	font-size: 4vh;
+	font-family: sans-serif;
+	width: 100%;
+    height:100%;
+    background-color: var(--primaryTB);
+}
+html{
+    overflow-x: hidden;
+}
+::selection {
+    background: rgba(0,0,0,0.5);
+    color: white;
+}
+/* fonte */
+@font-face {
+    font-family: 'myFont';
+    src:   url("../font/Vicky.otf") format("opentype");
+  }
+/* declarando variaveis*/
+:root{
+	--primaryTB:lightblue;
+    --secondaryTB:#f9fafc;
+    --atras: ".varal";
+}
+
+/* sections */
+section{
+    width: 100%;
+	background-color: var(--primaryTB);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+/* title */
+.title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 10%;
+    text-align: center;
+    font-family:"myFont";
+    font-size: 10vh;
+    text-shadow: 2px 2px mediumturquoise;
+    color: dodgerblue;
+}
+/* musica de fundo */
+.musicaFundo{
+    display: none;
+}
+.music{
+    z-index: 2;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 8%;
+    background: linear-gradient(90deg, rgba(74,72,115,1) 0%, rgba(66,196,222,1) 100%);
+}
+.trackMusic{
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    right: 0;
+    position: absolute;
+}
+.mask{
+    z-index: 3;
+    width: 100%;
+    position: absolute;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    color:dodgerblue;
+    pointer-events: none;
+}
+/* fazendo o polaroid */
+/* varal */
+.corda{
+    margin-top: 5%;
+    background-image: url(../img/corda.png);
+    width: 100%;
+    background-size:100%;
+    background-repeat:no-repeat;
+}
+/* pacote */
+.pac{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    width: 30%;
+}
+/* pregador */
+.pregador{
+    background-image: url("../img/pregador.png");
+    width: 20%;
+    background-size:100%;
+    background-repeat:no-repeat;
+    z-index: 1;    
+}
+/* papel do polaroid */
+.polaroid{
+    width: 80%;
+    padding: 10px 10px 50px 10px;
+    background-color: white;
+    position: relative;
+    top:-1%;
+    z-index: 0;
+}
+/* foto */
+.polar{
+    height: 100%;
+    width: 100%;
+    background-color: rgb(46, 35, 35);
+    background-size: cover;
+    background-repeat:no-repeat;
+    background-position:center;
+    /* transform: rotate(90deg); */
+    position: relative;
+    /* bottom: -12%;
+    left: -15%; */
+
+}
+.ft1{
+    background-image: url(../img/panpan/1.png);
+}
+.ft2{
+    background-image: url(../img/panpan/2.png);
+}
+.ft3{
+    background-image: url(../img/panpan/3.png);
+}
+.ft4{
+    background-image: url(../img/panpan/4.png);
+}
+.ft5{
+    background-image: url(../img/panpan/5.png);
+}
+.ft6{
+    background-image: url(../img/panpan/6.png);
+}
+.ft7{
+    background-image: url(../img/panpan/7.png);
+}
+.ft8{
+    background-image: url(../img/panpan/8.png);
+}
+.ft9{
+    background-image: url(../img/panpan/9.png);
+}
+.ft10{
+    background-image: url(../img/panpan/10.png);
+}
+.ft11{
+    background-image: url(../img/panpan/11.png);
+}
+.ft12{
+    background-image: url(../img/panpan/12.png);
+}
+.ft13{
+    background-image: url(../img/panpan/13.png);
+}
+.ft14{
+    background-image: url(../img/panpan/14.png);
+}
+.ft15{
+    background-image: url(../img/panpan/15.png);
+}
+.ft16{
+    background-image: url(../img/panpan/16.png);
+}
+.ft17{
+    background-image: url(../img/panpan/17.png);
+}
+.ft18{
+    background-image: url(../img/panpan/18.png);
+}
+.ft19{
+    background-image: url(../img/panpan/19.png);
+}
+.ft20{
+    background-image: url(../img/panpan/20.png);
+}.ft21{
+    background-image: url(../img/panpan/21.png);
+}
+/*---------------responsvidade--------------*/
+@media only screen and (max-width: 800px){
+	html{
+		overflow-x: hidden;
+	}
+	/* pacote */
+    .pac{
+        width: 60%;
+    }
+
+}
