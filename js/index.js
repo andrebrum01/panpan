@@ -2,7 +2,7 @@ var tamtilte =$(".title").height();
 var audio =document.getElementById("mf");
 var tamMusic = $(".music").width();
 var pac = $(".pac")
-var num ;
+var num ,j=0;
 if( $(window).width()>=800) num=3;
 else num=1;
 $(".corda").remove();
@@ -26,9 +26,11 @@ $(document).ready(function(){
             pac.eq(i).before('<div class="corda"></div>');
         }
     }
+    a();
 
 });
 function atualizar(){
+    tamSite=($("section").height() + $(".title").height());
     tamMusic = $(".music").width();
     $(".title").height(tamtilte+50);
     $(".pregador").height($(".pregador").width()*955/638);
@@ -76,3 +78,15 @@ $(window).resize(function () {
         }
     }
 });
+
+function a(){
+    var pos = $(".polaroid").eq(j).offset().top - 30;
+    $('html').animate({scrollTop: pos}, 3000);
+    j++;
+    if(j==$(".polaroid").length) j=0;
+    setTimeout(() => {
+        a();
+    }, 5000); 
+       
+   
+}
