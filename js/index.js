@@ -12,14 +12,22 @@ for(var i=0;i<pac.length;i++){
     }
 }
 $(document).ready(function(){
-var quant = $(".polar");
-for(var i=0;i<quant.length;i++){
-    var name = "ft"+(i+1).toString();
-    quant.eq(i).addClass(name);
+    $(".polaroid").each(function (i) { 
+        var name = "ft"+(i+1).toString();
+        $(this).append("<img src='img/panpan/"+(i+1)+".png' class='polar' />");
+    });
 
-}
-}
-);
+    $(".corda").remove();
+    
+    if( $(window).width()>=800) num=3;
+    else num=1;
+    for(var i=0;i<pac.length;i++){
+        if(i%num==0) {
+            pac.eq(i).before('<div class="corda"></div>');
+        }
+    }
+
+});
 function atualizar(){
     tamMusic = $(".music").width();
     $(".title").height(tamtilte+50);
@@ -57,8 +65,9 @@ $(window).scroll(function () {
     atualizar();
 });
 $(window).resize(function () { 
-    $(".corda").remove();
     atualizar();
+    $(".corda").remove();
+    
     if( $(window).width()>=800) num=3;
     else num=1;
     for(var i=0;i<pac.length;i++){
